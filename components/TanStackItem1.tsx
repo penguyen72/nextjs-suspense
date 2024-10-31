@@ -3,9 +3,9 @@
 import { useQuery } from '@tanstack/react-query';
 import { getData1 } from '../app/actions';
 
-export function Product1() {
+export function TanStackItem1() {
   const { data } = useQuery({
-    queryKey: ['product1'],
+    queryKey: ['item1'],
     queryFn: () => getData1(),
   });
 
