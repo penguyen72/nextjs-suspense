@@ -1,12 +1,12 @@
 'use client';
 
-import { useQuery } from '@tanstack/react-query';
+import { useSuspenseQuery } from '@tanstack/react-query';
 import { getData1 } from '../app/actions';
 
 export function TanStackItem1() {
-  const { data } = useQuery({
+  const { data } = useSuspenseQuery({
     queryKey: ['item1'],
-    queryFn: () => getData1(),
+    queryFn: async () => getData1(),
   });
 
   return <div>{data}</div>;
